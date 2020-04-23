@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,28 +13,84 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         android:weightSum="4">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="20sp" />
 
-        <HorizontalScrollView
+        <com.example.syncrecyclerview.OutHScrollView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3">
+            android:layout_weight="3"
+            android:overScrollMode="never"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:id="@+id/line_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        </HorizontalScrollView>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="内容1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="内容2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="内容3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="内容4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="内容5"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </com.example.syncrecyclerview.OutHScrollView>
 
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>
